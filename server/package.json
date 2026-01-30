@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "description": "nodejs vuejs webblog server (backend)",
   "license": "ISC",
-<<<<<<< HEAD
   "author": "Parichat Thongbai",
-=======
-  "author": "Parichat Thongbai",
->>>>>>> master
   "type": "commonjs",
   "main": "src/app.js",
   "scripts": {
