@@ -2,6 +2,7 @@
     <div>
         <h2>Get all users</h2>
         <p>
+            <button v-on:click="logout">Logout</button>
             <button v-on:click="navigateTo('/user/create')">สร้างผู้ใช้</button>
         </p>
         <h4>จำนวนผู้ใช้งาน {{ users.length }}</h4>
@@ -22,6 +23,7 @@
 
 <script>
 import UsersService from '../../services/UsersService'
+import { useAuthenStore } from '../../stores/authen'
 
 export default {
     data() {
@@ -38,8 +40,6 @@ export default {
         }
     },
 
-
-    // Logic จะเขียนตรงนี้
     methods: {
         navigateTo(route) {
             this.$router.push(route);
@@ -50,7 +50,15 @@ export default {
         },
         async refreshData() {
             this.users = (await UsersService.index()).data
-        }
+        },
+        logout () {
+            const authenStore = useAuthenStore()
+            authenStore.logout()
+            
+            this.$router.push({
+                name: 'login'
+            })
+        },
     },
 
 

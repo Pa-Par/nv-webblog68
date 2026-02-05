@@ -12,6 +12,7 @@
 
 <script>
 import AuthenService from '../services/AuthenService'
+import { useAuthenStore } from '../stores/authen'
 
 export default {
     data() {
@@ -30,6 +31,13 @@ export default {
                 })
 
                 console.log(response.data)
+
+                // เรียกใช้ Store
+                const authenStore = useAuthenStore()
+
+                // เก็บ Token และ User เข้า Store
+                authenStore.setToken(response.data.token)
+                authenStore.setUser(response.data.user)
 
                 this.$router.push({
                     name: 'users'
