@@ -1,8 +1,5 @@
 {
   "dependencies": {
-<<<<<<< HEAD
-    "axios": "^1.13.2"
-=======
     "axios": "^1.13.2",
     "body-parser": "^2.2.2",
     "cors": "^2.8.6",
@@ -10,6 +7,5 @@
     "mysql2": "^3.16.2",
     "sequelize": "^6.37.7",
     "sequelize-cli": "^6.6.5"
->>>>>>> master
   }
 }
