@@ -16,5 +16,10 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   color: #2c3e50;
   margin-top: 5px;
+  text-align: left;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 </style>
